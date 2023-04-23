@@ -18,5 +18,3 @@ jobs:
           git pull origin main
           go test -v ./..
           docker-compose down && docker-compose up --build -d
-    - name: test ssh
-      run: curl -v telnet://${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }}
